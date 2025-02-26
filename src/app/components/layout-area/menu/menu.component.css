@@ -1,0 +1,9 @@
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 30px;
+    color: blue;
+    font-size: 2vh;
+}

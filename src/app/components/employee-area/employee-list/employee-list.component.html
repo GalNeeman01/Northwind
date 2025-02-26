@@ -1,0 +1,28 @@
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Title</th>
+                <th>Birth Date</th>
+                <th>City</th>
+                <th>Country</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (e of employees; track $index) {
+                <tr>
+                    <td>{{e.id}}</td>
+                    <td (click)="displayDetails(e.id)">{{e.firstName + " " + e.lastName}}</td>
+                    <td>{{e.title}}</td>
+                    <td>{{e.birthDate | date: "YYYY/MM/dd" }}</td>
+                    <td>{{e.city}}</td>
+                    <td>{{e.country}}</td>
+                    <td><img src="{{e.imageUrl}}" class="employee-image"></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

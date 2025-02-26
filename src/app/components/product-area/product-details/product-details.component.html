@@ -1,0 +1,10 @@
+<div>
+    @if (product) {
+        <h3>Product Name: {{product.id}}</h3>
+        <h3>Product Name: {{product.price | currency}}</h3>
+        <h3>Product Name: {{product.name}}</h3>
+        <img [src]="product.imageUrl">
+        <br>
+        <a routerLink="/products">Back</a>
+    }
+</div>

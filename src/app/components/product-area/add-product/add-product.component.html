@@ -1,0 +1,17 @@
+<div>
+    <form (submit)="send()">
+        <label>Name</label>
+        <input type="text" name="name" [(ngModel)]="product.name">
+        
+        <label>Price</label>
+        <input type="number" name="price" [(ngModel)]="product.price">
+        
+        <label>Stock</label>
+        <input type="number" name="stock" [(ngModel)]="product.stock">
+
+        <label>Image</label>
+        <input type="file" accept="image/*" name="image" #productImage>
+
+        <button>Add</button>
+    </form>
+</div>

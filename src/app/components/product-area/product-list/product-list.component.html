@@ -1,0 +1,24 @@
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (product of products; track $index) {
+                <tr (click)="displayDetails(product.id)">
+                    <td>{{product.id}}</td>
+                    <td>{{product.name}}</td>
+                    <td>{{product.price | currency}}</td>
+                    <td>{{product.stock}}</td>
+                    <td><img src="{{product.imageUrl}}" class="product-image"></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

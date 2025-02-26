@@ -1,0 +1,15 @@
+<div>
+    @if (employee) {
+        <h3>Name: {{employee.firstName + " " + employee.lastName}}</h3>
+
+        <h3>Title: {{employee.title}}</h3>
+    
+        <h3>Birth Date: {{employee.birthDate}}</h3>
+    
+        <h3>City: {{employee.city}}</h3>
+    
+        <h3>Country: {{employee.country}}</h3>
+    
+        <img [src]="employee.imageUrl">
+    }
+</div>

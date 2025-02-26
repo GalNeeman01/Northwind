@@ -1,0 +1,15 @@
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+h1 {
+    font-size: 4vh;
+}
+
+.logo {
+    position: absolute;
+    left: 20px;
+}
