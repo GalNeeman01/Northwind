@@ -1,0 +1,20 @@
+<div>
+    <form #productForm="ngForm" (ngSubmit)="send()">
+        @if (product) {
+            <label>Name</label>
+            <input type="text" name="name" [(ngModel)]="product.name">
+            
+            <label>Price</label>
+            <input type="number" name="price" [(ngModel)]="product.price">
+            
+            <label>Stock</label>
+            <input type="number" name="stock" [(ngModel)]="product.stock">
+    
+            <label>Image</label>
+            <input type="file" accept="image/*" name="image" #productImage>
+            <span><img [src]="product.imageUrl" class="img"></span>
+    
+            <button [disabled]="productForm.invalid">Save</button>
+        }
+    </form>
+</div>

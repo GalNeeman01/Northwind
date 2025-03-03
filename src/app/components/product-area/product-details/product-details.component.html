@@ -6,5 +6,9 @@
         <img [src]="product.imageUrl">
         <br>
         <a routerLink="/products">Back</a>
+        |
+        <a routerLink="/products/edit-product/{{product.id}}">Edit</a>
+        |
+        <a href="javascript:void(0)" (click)="deleteProduct()">Delete</a>
     }
 </div>

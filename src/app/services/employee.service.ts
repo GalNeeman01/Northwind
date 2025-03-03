@@ -26,4 +26,9 @@ export class EmployeeService {
 
     return employee;
   }
+
+  public async removeEmployee(id: number) {
+    const deletedEmployee$ = this.http.delete<EmployeeModel>(environment.employeesUrl + id);
+    await firstValueFrom(deletedEmployee$);
+  }
 }

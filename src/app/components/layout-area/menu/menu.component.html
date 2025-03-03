@@ -1,13 +1,17 @@
 <nav>
 
-    <a routerLink="home">Home</a>
+    <a routerLinkActive="active" routerLink="home" [routerLinkActiveOptions]="{exact: true}">Home</a>
 
-    <a routerLink="products">Products</a>
+    <a routerLinkActive="active" routerLink="products" [routerLinkActiveOptions]="{exact: true}">Products</a>
 
-    <a routerLink="employees">Employees</a>
+    <a routerLinkActive="active" routerLink="employees" [routerLinkActiveOptions]="{exact: true}">Employees</a>
 
-    <a routerLink="products/new">Add Product</a>
+    <a routerLinkActive="active" routerLink="products/new" [routerLinkActiveOptions]="{exact: true}">Add Product</a>
+
+    <a routerLinkActive="active" routerLink="employees/new" [routerLinkActiveOptions]="{exact: true}">Add Employee</a>
     
-    <a routerLink="contact">Contact Us</a>
+    <a routerLinkActive="active" routerLink="contact" [routerLinkActiveOptions]="{exact: true}">Contact Us</a>
+
+    <a routerLinkActive="active" routerLink="top-three" [routerLinkActiveOptions]="{exact: true}">Top Three</a>
 
 </nav>

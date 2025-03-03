@@ -1,0 +1,11 @@
+<div>
+    @if (userStore.user()) {
+        <span>Hello, {{userStore.fullName()}} |</span>
+        <a routerLink="/home" (click)="logout()">Logout</a>
+    }
+    @else {
+        <a routerLink="/login">Login</a>
+        <span> | </span>
+        <a routerLink="/register">Register</a>
+   }
+</div>

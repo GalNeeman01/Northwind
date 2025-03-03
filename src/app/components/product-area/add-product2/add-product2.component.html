@@ -1,0 +1,28 @@
+<div>
+    <form [formGroup]="productForm" (submit)="send()">
+        <label>Name</label>
+        <input type="text" formControlName="nameControl">
+        <span *ngIf="productForm.controls['nameControl'].errors?.['required'] && productForm.controls['nameControl'].touched">Missing name.</span>
+        <span *ngIf="productForm.controls['nameControl'].errors?.['minlength'] && productForm.controls['nameControl'].touched">Name is too short.</span>
+        <span *ngIf="productForm.controls['nameControl'].errors?.['maxlength'] && productForm.controls['nameControl'].touched">Name is too long.</span>
+        <span *ngIf="productForm.controls['nameControl'].errors?.['extraSpacing'] && productForm.controls['nameControl'].touched">Extra spacing is forbidden.</span>
+        
+        <label>Price</label>
+        <input type="number" formControlName="priceControl">
+        <span *ngIf="productForm.controls['priceControl'].errors?.['required'] && productForm.controls['priceControl'].touched">Missing price.</span>
+        <span *ngIf="productForm.controls['priceControl'].errors?.['min'] && productForm.controls['priceControl'].touched">Price can't be negative.</span>
+        <span *ngIf="productForm.controls['priceControl'].errors?.['max'] && productForm.controls['priceControl'].touched">Price can't exceed 1000.</span>
+
+        <label>Stock</label>
+        <input type="number" formControlName="stockControl">
+        <span *ngIf="productForm.controls['stockControl'].errors?.['required'] && productForm.controls['stockControl'].touched">Missing stock.</span>
+        <span *ngIf="productForm.controls['stockControl'].errors?.['min'] && productForm.controls['stockControl'].touched">Stock can't be negative.</span>
+        <span *ngIf="productForm.controls['stockControl'].errors?.['max'] && productForm.controls['stockControl'].touched">Stock can't exceed 1000.</span>
+
+        <label>Image</label>
+        <input type="file" accept="image/*" #productImage formControlName="imageControl">
+        <span *ngIf="productForm.controls['imageControl'].errors?.['required'] && productForm.controls['imageControl'].touched">Missing image.</span>
+
+        <button [disabled]="productForm.invalid" class="btn btn-primary">Add</button>
+    </form>
+</div>

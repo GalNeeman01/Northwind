@@ -1,0 +1,12 @@
+<div>
+    <form [formGroup]="userForm" (submit)="send()">
+
+        <label>Email</label>
+        <input type="email" formControlName="emailControl">
+        
+        <label>Password</label>
+        <input type="password" formControlName="passwordControl">
+
+        <button>Send</button>
+    </form>
+</div>

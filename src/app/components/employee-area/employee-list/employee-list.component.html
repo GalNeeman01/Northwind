@@ -9,6 +9,7 @@
                 <th>City</th>
                 <th>Country</th>
                 <th>Image</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -21,6 +22,7 @@
                     <td>{{e.city}}</td>
                     <td>{{e.country}}</td>
                     <td><img src="{{e.imageUrl}}" class="employee-image"></td>
+                    <td><button (click)="deleteEmployee(e.id)" class="btn btn-danger">Delete</button></td>
                 </tr>
             }
         </tbody>

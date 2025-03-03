@@ -7,3 +7,11 @@ nav {
     color: blue;
     font-size: 2vh;
 }
+
+a {
+    color: blue;
+}
+
+.active {
+    color: green;
+}
